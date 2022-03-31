@@ -1,0 +1,9 @@
+@use "./Variables.scss" as *;
+
+.main-content {
+  position: absolute;
+  right: 0;
+  top: $nav-height;
+  width: calc(100% - $aside-width);
+  color: $text-primary;
+}

@@ -1,0 +1,25 @@
+@use "./Variables.scss" as *;
+
+.navbar {
+  margin-bottom: 30px;
+
+  &__list {
+    color: white;
+    list-style: none;
+    font-size: 1.5rem;
+
+    &__item {
+      margin-bottom: 20px;
+
+      .link {
+        text-decoration: none;
+        color: $text-primary;
+
+        &__name {
+          margin-left: 15px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
