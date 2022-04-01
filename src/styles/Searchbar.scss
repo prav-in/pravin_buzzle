@@ -5,17 +5,26 @@
   height: $nav-height;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border: 1px solid $color-border;
   position: relative;
 
+  @include for-tablet-landscape-up {
+    justify-content: center;
+  }
+
   &__search {
-    width: 450px;
+    margin-left: 25px;
+    width: 45%;
     height: 42px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     font-family: "Roboto", sans-serif;
+
+    @include for-tablet-portrait-up {
+      width: 450px;
+    }
 
     &__input {
       height: 100%;
@@ -47,17 +56,25 @@
       padding-top: 5px;
       background: #272626;
       height: 100%;
-      width: 12%;
+      width: 60px;
       border: none;
       border-bottom-right-radius: 3px;
       border-top-right-radius: 3px;
       cursor: pointer;
+
+      @include for-desktop-up {
+        width: 12%;
+      }
     }
   }
 
   .button-wrapper {
     position: absolute;
-    right: 60px;
+    right: 5px;
+
+    @include for-big-desktop-up {
+      right: 60px;
+    }
 
     &__button {
       font-family: "Play", sans-serif;

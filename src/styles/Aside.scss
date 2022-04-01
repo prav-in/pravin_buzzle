@@ -1,6 +1,8 @@
 @use "./Variables.scss" as *;
 
 .aside-container {
+  background: black;
+  z-index: 1;
   width: $aside-width;
   padding: 20px 10px 10px 50px;
   border-right: 1px solid $color-border;
@@ -8,7 +10,12 @@
   font-family: "Roboto", sans-serif;
   position: absolute;
   top: $nav-height;
-  left: 0;
+  left: calc(-1 * $aside-width);
+  transition: 0.3s;
+
+  @include for-big-desktop-up {
+    left: 0;
+  }
 
   &__back {
     color: $text-primary;
@@ -21,5 +28,35 @@
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  &__slide {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    padding: 5px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    background: blue;
+    color: $text-primary;
+    cursor: pointer;
+
+    @include for-big-desktop-up {
+      display: none;
+    }
+  }
+
+  .expanded {
+    display: none;
+  }
+}
+
+.aside-open {
+  transform: translateX($aside-width);
+
+  @include for-big-desktop-up {
+    transform: translate(0);
   }
 }

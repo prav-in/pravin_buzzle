@@ -9,6 +9,7 @@
     font-weight: normal;
     color: $color-border;
     margin-bottom: 20px;
+    margin-left: 10px;
 
     .highlight {
       color: $text-primary;
@@ -24,13 +25,43 @@
 
   .events-container {
     display: grid;
-    grid-template-columns: repeat(5, 230px);
-    margin-bottom: 25px;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    height: 350px;
+    overflow: hidden;
+
+    @include for-phone-only {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include for-big-phone-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-tablet-portrait-up {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include for-desktop-up {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .expanded {
+    height: fit-content;
   }
 
   &__expand {
+    outline: none;
+    background: none;
+    border: none;
     color: blue;
     font-size: 0.85rem;
     cursor: pointer;
+    margin-left: 10px;
   }
 }

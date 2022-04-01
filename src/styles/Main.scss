@@ -1,11 +1,14 @@
 @use "./Variables.scss" as *;
 
 .main-content {
-  position: absolute;
-  right: 0;
-  top: $nav-height;
-  width: calc(100% - $aside-width);
   color: $text-primary;
   padding: 40px;
   font-family: "Roboto", sans-serif;
+
+  @include for-big-desktop-up {
+    position: absolute;
+    right: 0;
+    top: $nav-height;
+    width: calc(100% - $aside-width);
+  }
 }
