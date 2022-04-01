@@ -15,6 +15,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    font-family: "Roboto", sans-serif;
 
     &__input {
       height: 100%;
@@ -59,6 +60,9 @@
     right: 60px;
 
     &__button {
+      font-family: "Play", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
       padding: 8px 5px;
       width: 75px;
       background: #00b4d8;
@@ -67,6 +71,12 @@
       margin-left: 8px;
       border-radius: 5px;
       cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #4dcbe4;
+        color: black;
+      }
     }
   }
 }

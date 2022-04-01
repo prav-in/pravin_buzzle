@@ -1,0 +1,36 @@
+@use "./Variables.scss" as *;
+
+.events {
+  margin-bottom: 25px;
+  padding: 3px;
+
+  &__heading {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: $color-border;
+    margin-bottom: 20px;
+
+    .highlight {
+      color: $text-primary;
+      font-weight: 500;
+    }
+
+    .content-title {
+      color: $text-primary;
+      font-weight: 500;
+      border-bottom: 1px solid $text-primary;
+    }
+  }
+
+  .events-container {
+    display: grid;
+    grid-template-columns: repeat(5, 230px);
+    margin-bottom: 25px;
+  }
+
+  &__expand {
+    color: blue;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+}

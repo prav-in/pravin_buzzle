@@ -4,21 +4,26 @@
   margin-bottom: 30px;
 
   &__list {
-    color: white;
     list-style: none;
     font-size: 1.5rem;
+    font-weight: 300;
 
     &__item {
       margin-bottom: 20px;
 
       .link {
         text-decoration: none;
-        color: $text-primary;
+        color: $text-secondary;
 
         &__name {
           margin-left: 15px;
           font-size: 1.2rem;
         }
+      }
+
+      .selected {
+        color: $text-primary;
+        font-weight: 500;
       }
     }
   }
